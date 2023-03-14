@@ -13,6 +13,15 @@
     .headerrow {
       background-color: darkseagreen;
     }
+    .join_room_response {
+      margin: 1px 1px 1px 10px;
+      background-color: rgb(172, 189, 172);
+    }
+    .chat_message {
+      margin: 1px 1px 1px 1px;
+      font-size: 125%;
+      color: rgb(53,3,168);
+    }
   </style>
   <title>Reversi: Lobby</title>
 </head>
@@ -28,6 +37,14 @@
   </div>
   <div class="row m-3">
     <div class="col">
+      <div class="row align-items-center justify-content-center m-3">
+        <div class="col-8">
+          <div class="input-group">
+            <input type="text" class="form-control text-nowrap" id="chatMessage" placeholder="Enter your message here" aria-label="Enter your message to send to the chat room" />
+            <button type="submit" class="btn btn-primary text-nowrap" id="chatButton" onclick="sendChatMessage()">Send</button>
+          </div>
+        </div>
+      </div>
       <h4>Messages</h4>
       <div id="messages">
 
