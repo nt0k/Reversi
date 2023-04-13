@@ -1,0 +1,27 @@
+body {
+    background-color: rgb(62, 127, 165);
+  }
+.headerrow, #messagePane {
+    background-color: rgb(167, 37, 76);
+  }
+
+.join_room_response,.left_room_response {
+    background-color: rgb(247, 247, 247);
+  }
+
+.chat_message {
+    margin: 1px 1px 1px 1px;
+    font-size: 125%;
+    color: rgb(0, 0, 0);
+  }
+
+table#game_board {
+    border:4px solid black;
+    margin:0px;
+    padding:0px;
+}
+table#game_board td{
+    border:1px solid black;
+    margin:0px;
+    padding:0px;
+}
