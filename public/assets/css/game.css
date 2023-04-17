@@ -25,3 +25,9 @@ table#game_board td{
     margin:0px;
     padding:0px;
 }
+
+td.hovered_over:hover {
+  background-image: url('/assets/images/hover.gif');
+  background-color: red;
+}
+
