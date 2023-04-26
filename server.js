@@ -846,6 +846,7 @@ function send_game_update(socket, game_id, message) {
             game: games[game_id],
             who_won: winner
         }
+        console.log(game);
         io.in(game_id).emit('game_over', payload);
 
         /* Delete old games after one hour */

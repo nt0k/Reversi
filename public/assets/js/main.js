@@ -29,7 +29,7 @@ socket.on('log', function (array) {
 });
 
 function makeInviteButton(socket_id) {
-    let newHTML = "<button type='button' class='btn btn-outline-primary'>Invite</button>";
+    let newHTML = "<button type='button' class='btn btn-primary'>Invite</button>";
     let newNode = $(newHTML);
     newNode.click(() => {
         let payload = {
@@ -365,9 +365,11 @@ socket.on('game_update', (payload) => {
             }
             /* Set up interactivity */
             $('#' + row + '_' + column).off('click');
+            $('#' + row + '_' + column).removeClass('highlight');
             $('#' + row + '_' + column).removeClass('hovered_over');
             if (payload.game.whose_turn === my_color) {
                 if (payload.game.legal_moves[row][column] === my_color.substring(0, 1)) {
+                    $('#' + row + '_' + column).addClass('highlight');
                     $('#' + row + '_' + column).addClass('hovered_over');
                     $('#' + row + '_' + column).click(((r, c) => {
                         return (() => {
@@ -462,7 +464,7 @@ $(() => {
     socket.emit('join_room', request);
 
     $("#lobbyTitle").html(username + "'s Lobby");
-    $("#quit").html("<a href='lobby.html?username=" + username + "' class=btn btn-danger' role='button'>Quit</a>");
+    $("#quit").html("<a href='lobby.html?username=" + username + "' class=btn btn-danger' role='button'><b>Quit</b></a>");
 
     $('#chatMessage').keypress(function (e) {
         let key = e.which;

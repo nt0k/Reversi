@@ -1,18 +1,17 @@
 body {
-    background-color: rgb(62, 127, 165);
+    background-color: deepskyblue;
   }
 .headerrow, #messagePane, #quit>a {
     background-color: rgb(167, 37, 76);
+    border-radius: 15px;
+    padding: 10px;
   }
 
-.join_room_response,.left_room_response {
-    background-color: rgb(247, 247, 247);
-  }
-
-.chat_message {
+  .chat_message, .join_room_response,.left_room_response {
     margin: 1px 1px 1px 1px;
     font-size: 125%;
     color: rgb(0, 0, 0);
+    padding: 2px;
   }
 
 table#game_board {
@@ -24,10 +23,13 @@ table#game_board td{
     border:1px solid black;
     margin:0px;
     padding:0px;
-    background-color: rgb(49, 96, 122);
+    background-color: deepskyblue;
 }
 
 td.hovered_over:hover {
   background-image: url('/assets/images/hover.gif');
+}
+td.highlight {
+  background-image: url('/assets/images/legal.png');
 }
 
